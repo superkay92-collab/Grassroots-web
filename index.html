@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grassroot Networking - Ghana</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="Grassroot Networking Logo" class="logo-img">
+                <h2>GRASSROOT NETWORKING</h2>
+            </div>
+            <button id="navToggle" class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="mainNavLinks">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul id="mainNavLinks" class="nav-links">
+                <li><a href="#" onclick="showTab('home')" class="nav-link active">HOME</a></li>
+                <li><a href="#" onclick="showTab('departments')" class="nav-link">OUR SERVICES</a></li>
+                <li><a href="#" onclick="showTab('employees')" class="nav-link">THE TEAM</a></li>
+                <li><a href="#" onclick="showTab('gallery')" class="nav-link">GALLERY</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Tab -->
+    <div id="home" class="tab-content active">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-image">
+                <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/gallery/WhatsApp Image 2026-03-23 at 8.23.06 AM (12).jpeg">
+                    <source src="hero-background.MP4" type="video/mp4">
+                </video>
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h1 class="hero-headline">Inspiring Growth</h1>
+                    <p class="hero-subheadline">Building Communities, Creating Opportunities</p>
+                    <button class="cta-button" onclick="showTab('departments')">EXPLORE OUR SERVICES</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <p class="about-intro">Empowering communities and connecting professionals across Ghana and the diaspora through innovation, collaboration, and impact-driven initiatives.</p>
+                    <p>We are a dynamic organization dedicated to making a positive impact across Ghana through five strategic departments: Networking, Real Estate, Farming, Health, and Consulting Agency. Our integrated approach combines professional excellence with community engagement.</p>
+                    <a href="#learn-more-section" class="about-learn-btn">Learn More</a>
+                    <div class="about-gallery-preview" aria-label="Gallery preview">
+                        <a href="#" class="about-gallery-link" onclick="showTab('gallery')" aria-label="Open gallery from image 1">
+                            <img src="assets/gallery/WhatsApp Image 2026-03-23 at 8.23.06 AM (3).jpeg" alt="Grassroot event moment 1">
+                        </a>
+                        <a href="#" class="about-gallery-link" onclick="showTab('gallery')" aria-label="Open gallery from image 2">
+                            <img src="assets/gallery/WhatsApp Image 2026-03-23 at 8.23.06 AM (10).jpeg" alt="Grassroot event moment 2">
+                        </a>
+                        <a href="#" class="about-gallery-link" onclick="showTab('gallery')" aria-label="Open gallery from image 3">
+                            <img src="assets/gallery/WhatsApp Image 2026-03-23 at 8.23.07 AM (1).jpeg" alt="Grassroot event moment 3">
+                        </a>
+                        <a href="#" class="about-gallery-link" onclick="showTab('gallery')" aria-label="Open gallery from image 4">
+                            <img src="assets/gallery/WhatsApp Image 2026-03-23 at 8.23.07 AM (8).jpeg" alt="Grassroot event moment 4">
+                        </a>
+                    </div>
+                    <!-- Learn More Section -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stat">
+                    <h3>5</h3>
+                    <p>Departments</p>
+                </div>
+                <div class="stat">
+                    <h3>500+</h3>
+                    <p>Team Members</p>
+                </div>
+                <div class="stat">
+                    <h3>10K+</h3>
+                    <p>Lives Impacted</p>
+                </div>
+                <div class="stat">
+                    <h3>50+</h3>
+                    <p>Projects</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Departments Tab -->
+    <div id="departments" class="tab-content">
+        <section class="departments-section">
+            <div class="container">
+                <h1>OUR SERVICES</h1>
+                <p class="section-subtitle">Five pillars driving excellence and impact</p>
+
+                <div class="departments-grid">
+                    <div class="dept-card">
+                        <div class="dept-icon">🌐</div>
+                        <h3>Networking</h3>
+                        <p>Building professional connections and facilitating business relationships across Ghana and the diaspora.</p>
+                        <ul class="dept-features">
+                            <li>Business Conferences</li>
+                            <li>Professional Development</li>
+                            <li>Partnership Programs</li>
+                        </ul>
+                    </div>
+
+                    <div class="dept-card">
+                        <div class="dept-icon">🏢</div>
+                        <h3>Real Estate</h3>
+                        <p>Comprehensive real estate solutions including property development, leasing, and investment opportunities.</p>
+                        <ul class="dept-features">
+                            <li>Property Development</li>
+                            <li>Investment Opportunities</li>
+                            <li>Leasing Services</li>
+                        </ul>
+                    </div>
+
+                    <div class="dept-card">
+                        <div class="dept-icon">🌾</div>
+                        <h3>Farming</h3>
+                        <p>Promoting sustainable agricultural practices and supporting farmers with modern techniques and resources.</p>
+                        <ul class="dept-features">
+                            <li>Sustainable Farming</li>
+                            <li>Farmer Support</li>
+                            <li>Modern Techniques</li>
+                        </ul>
+                    </div>
+
+                    <div class="dept-card">
+                        <div class="dept-icon">🏥</div>
+                        <h3>Health</h3>
+                        <p>Delivering quality healthcare services and wellness programs to improve community health.</p>
+                        <ul class="dept-features">
+                            <li>Healthcare Services</li>
+                            <li>Wellness Programs</li>
+                            <li>Community Health</li>
+                        </ul>
+                    </div>
+
+                    <div class="dept-card">
+                        <div class="dept-icon">🧭</div>
+                        <h3>Consulting Agency</h3>
+                        <p>Providing strategic advisory services for organizations, entrepreneurs, and community projects.</p>
+                        <ul class="dept-features">
+                            <li>Business Strategy</li>
+                            <li>Project Advisory</li>
+                            <li>Operational Support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Team Tab -->
+    <div id="employees" class="tab-content">
+        <section class="team-section">
+            <div class="container">
+                <h1>THE TEAM</h1>
+                <p class="section-subtitle">Meet the talented individuals driving our vision</p>
+
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="team-image">👨‍💼</div>
+                        <h3>Prince Dahome</h3>
+                        <p class="position">Co Founder</p>
+                        <p class="bio">Co-founding Grassroot Networking and driving strategic growth across all departments.</p>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-image">👩‍💼</div>
+                        <h3>Sarah Oteng</h3>
+                        <p class="position">Co Founder</p>
+                        <p class="bio">Co-founding Grassroot Networking with a focus on operations, partnerships, and impact.</p>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-image">👩‍💼</div>
+                        <h3>Vicky Osie</h3>
+                        <p class="position">Co Founder</p>
+                        <p class="bio">Co-founding Grassroot Networking and leading innovation for community-focused initiatives.</p>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-image">👩‍💼</div>
+                        <h3>Elizabeth Berry</h3>
+                        <p class="position">Accountant</p>
+                        <p class="bio">Managing company finances, reporting, and financial planning across departments.</p>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-image">👨‍💼</div>
+                        <h3>Kofi Mensah</h3>
+                        <p class="position">Real Estate Director</p>
+                        <p class="bio">Overseeing property development and investment strategies.</p>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-image">👩‍💼</div>
+                        <h3>Grace Owusu</h3>
+                        <p class="position">Health Services Manager</p>
+                        <p class="bio">Leading healthcare initiatives and wellness programs.</p>
+                    </div>
+                </div>
+
+                <!-- Add Employee Form -->
+                <div class="add-team-section">
+                    <h2>Join Our Team</h2>
+                    <form class="team-form">
+                        <input type="text" placeholder="Full Name" required>
+                        <input type="email" placeholder="Email Address" required>
+                        <input type="text" placeholder="Position" required>
+                        <textarea placeholder="Brief Biography" rows="3" required></textarea>
+                        <button type="submit" class="submit-btn">Add Team Member</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Gallery Tab -->
+    <div id="gallery" class="tab-content">
+        <section class="gallery-section">
+            <div class="container">
+                <h1>Gallery</h1>
+                <p class="section-subtitle">Moments from Grassroot Networking events and community activities</p>
+                <div id="galleryGrid" class="gallery-grid"></div>
+                <div class="gallery-actions">
+                    <button id="galleryLoadMoreBtn" class="gallery-load-more" type="button">Load More Photos</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Reviews Tab -->
+    <div id="reviews" class="tab-content">
+        <section class="reviews-section">
+            <div class="container">
+                <h1>Reviews</h1>
+                <p class="section-subtitle">What guests, partners, and community members say about Grassroot Networking</p>
+
+                <div id="reviewsGrid" class="reviews-grid">
+                    <div class="review-card">
+                        <div class="review-rating">★★★★★</div>
+                        <p class="review-text">The event atmosphere was excellent, and the networking opportunities were truly valuable. Grassroot Networking creates meaningful connections.</p>
+                        <h3>Akosua Mensah</h3>
+                        <p class="review-role">Event Guest</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-rating">★★★★★</div>
+                        <p class="review-text">Professional organization, welcoming environment, and strong community impact. It was a memorable and well-coordinated experience.</p>
+                        <h3>Daniel Asante</h3>
+                        <p class="review-role">Business Partner</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-rating">★★★★★</div>
+                        <p class="review-text">I appreciate how the team combines professionalism with genuine care for people. The platform feels inspiring and well managed.</p>
+                        <h3>Maame Serwaa</h3>
+                        <p class="review-role">Community Member</p>
+                    </div>
+                </div>
+
+                <div class="review-form-section">
+                    <h2>Leave a Review</h2>
+                    <form class="review-form">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="text" placeholder="Your Role or Company" required>
+                        <select required>
+                            <option value="">Select Rating</option>
+                            <option value="5">5 Stars</option>
+                            <option value="4">4 Stars</option>
+                            <option value="3">3 Stars</option>
+                            <option value="2">2 Stars</option>
+                            <option value="1">1 Star</option>
+                        </select>
+                        <textarea placeholder="Share your experience" rows="4" required></textarea>
+                        <button type="submit" class="submit-btn">Submit Review</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Careers Tab -->
+    <div id="careers" class="tab-content">
+        <section class="careers-section">
+            <div class="container">
+                <h1>Careers</h1>
+                <p class="section-subtitle">Join Grassroot Networking and help us build opportunities across Ghana.</p>
+
+                <div class="careers-grid">
+                    <div class="career-card">
+                        <h3>Programs Coordinator</h3>
+                        <p class="career-meta">Full-time | Accra</p>
+                        <p>Coordinate cross-department initiatives and ensure projects are delivered on schedule.</p>
+                    </div>
+
+                    <div class="career-card">
+                        <h3>Community Engagement Officer</h3>
+                        <p class="career-meta">Full-time | Hybrid</p>
+                        <p>Build strong community relationships and support outreach, events, and partnerships.</p>
+                    </div>
+
+                    <div class="career-card">
+                        <h3>Digital Media Assistant</h3>
+                        <p class="career-meta">Contract | Accra</p>
+                        <p>Create social and digital content that showcases our impact and upcoming initiatives.</p>
+                    </div>
+                </div>
+
+                <div class="career-form-section">
+                    <h2>Apply Now</h2>
+                    <form class="career-form">
+                        <input type="text" placeholder="Full Name" required>
+                        <input type="email" placeholder="Email Address" required>
+                        <select required>
+                            <option value="">Select Position</option>
+                            <option value="Programs Coordinator">Programs Coordinator</option>
+                            <option value="Community Engagement Officer">Community Engagement Officer</option>
+                            <option value="Digital Media Assistant">Digital Media Assistant</option>
+                        </select>
+                        <input type="file" class="resume-upload" accept=".pdf,.doc,.docx" required>
+                        <textarea placeholder="Why do you want to work with us?" rows="4" required></textarea>
+                        <button type="submit" class="submit-btn">Submit Application</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Contact Tab -->
+    <div id="contact" class="tab-content">
+        <section class="contact-section">
+            <div class="container">
+                <h1>CONNECT WITH US</h1>
+                <p class="section-subtitle">We'd love to hear from you</p>
+
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Head Office</h3>
+                        <p><strong>Address:</strong> Accra, Ghana</p>
+                        <p><strong>Email:</strong> <a href="mailto:info@grassrootnetworking.com">info@grassrootnetworking.com</a></p>
+                        <p><strong>Phone:</strong> <a href="tel:+233302000000">+233 30 2000 000</a></p>
+
+                        <h3 style="margin-top: 2rem;">Follow Us</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="contact-form">
+                        <form>
+                            <input type="text" placeholder="Your Name" required>
+                            <input type="email" placeholder="Your Email" required>
+                            <input type="text" placeholder="Subject" required>
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Admin Tab -->
+    <div id="admin" class="tab-content">
+        <section class="admin-section" id="admin-login">
+            <div class="container">
+                <h1>Admin Login</h1>
+                <p class="section-subtitle">Secure access for managing site information and monitoring activity.</p>
+
+                <div class="admin-panel">
+                    <div id="adminLoginCard" class="admin-card">
+                        <h2>Sign In</h2>
+                        <p class="admin-note">Authorized Grassroot Networking administrators only.</p>
+                        <form id="adminLoginForm" class="admin-form">
+                            <input type="text" placeholder="Admin Username" required>
+                            <input type="password" placeholder="Password" required>
+                            <button type="submit" class="submit-btn">Login</button>
+                            <p id="adminLoginMessage" class="admin-login-message" aria-live="polite"></p>
+                        </form>
+                    </div>
+
+                    <div id="adminDashboard" class="admin-dashboard hidden">
+                        <div class="admin-dashboard-header">
+                            <div>
+                                <h2>Admin Dashboard</h2>
+                                <p class="admin-note">You are signed in and can review the current site content overview.</p>
+                            </div>
+                            <button id="adminLogoutBtn" type="button" class="admin-logout-btn">Log Out</button>
+                        </div>
+
+                        <div class="admin-stats-grid">
+                            <div class="admin-stat-card">
+                                <h3 id="adminDepartmentsCount">0</h3>
+                                <p>Departments</p>
+                            </div>
+                            <div class="admin-stat-card">
+                                <h3 id="adminTeamCount">0</h3>
+                                <p>Team Profiles</p>
+                            </div>
+                            <div class="admin-stat-card">
+                                <h3 id="adminGalleryCount">0</h3>
+                                <p>Gallery Photos</p>
+                            </div>
+                            <div class="admin-stat-card">
+                                <h3 id="adminReviewsCount">0</h3>
+                                <p>Reviews</p>
+                            </div>
+                        </div>
+
+                        <div class="admin-summary-card">
+                            <h3>Admin Notes</h3>
+                            <ul class="admin-summary-list">
+                                <li>Use the Team form to add new team members.</li>
+                                <li>Use the Reviews form to collect visitor feedback.</li>
+                                <li>Career applications and resume names appear below.</li>
+                            </ul>
+                        </div>
+
+                        <div class="admin-summary-card" style="margin-top: 1.25rem;">
+                            <h3>Career Applications</h3>
+                            <div id="adminApplicationsList" class="admin-applications-list">
+                                <p class="admin-empty">No applications yet.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>ABOUT</h4>
+                    <ul>
+                        <li><a href="#" onclick="showTab('home')">ABOUT</a></li>
+                        <li><a href="#" onclick="showTab('departments')">OUR SERVICES</a></li>
+                        <li><a href="#" onclick="showTab('careers')">CAREERS</a></li>
+                        <li><a href="#" onclick="showTab('employees')">THE TEAM</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:info@grassrootnetworking.com">info@grassrootnetworking.com</a></li>
+                        <li><a href="#" onclick="showTab('contact')">Contact Form</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>OUR SERVICES</h4>
+                    <ul>
+                        <li><a href="#" onclick="showTab('departments')">Networking</a></li>
+                        <li><a href="#" onclick="showTab('departments')">Real Estate</a></li>
+                        <li><a href="#" onclick="showTab('departments')">Farming</a></li>
+                        <li><a href="#" onclick="showTab('departments')">Health</a></li>
+                        <li><a href="#" onclick="showTab('departments')">Consulting Agency</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>FOLLOW US ON SOCIAL MEDIA</h4>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Grassroot Networking. All Rights Reserved.</p>
+                <p>Based in Ghana | Creating Opportunities | Inspiring Growth</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="galleryLightbox" class="gallery-lightbox" aria-hidden="true">
+        <button id="lightboxPrev" class="gallery-lightbox-nav gallery-lightbox-prev" type="button" aria-label="Previous image">&#10094;</button>
+        <button id="lightboxClose" class="gallery-lightbox-close" type="button" aria-label="Close image viewer">&times;</button>
+        <img id="lightboxImage" class="gallery-lightbox-image" src="" alt="Expanded gallery image">
+        <button id="lightboxNext" class="gallery-lightbox-nav gallery-lightbox-next" type="button" aria-label="Next image">&#10095;</button>
+    </div>
+
+    <div id="siteNotice" class="site-notice" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
