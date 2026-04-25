@@ -1,0 +1,79 @@
+/* brand.css - Shared Brand Identity Styles */
+
+:root {
+    --primary-blue: #1976d2;
+    --primary-green: #2c5f2d;
+    --secondary-blue: #1251a3;
+    --secondary-green: #388e3c;
+    --gray-bg: #f7f8fa;
+    --text-dark: #222;
+    --text-light: #fff;
+    --font-heading: 'Montserrat', Arial, Helvetica, sans-serif;
+    --font-body: 'Manrope', Arial, Helvetica, sans-serif;
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+    --border-radius: 10px;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    background: var(--gray-bg);
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--primary-blue);
+    margin-bottom: var(--spacing-sm);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+.button, .cta-button, .about-learn-btn {
+    background: var(--primary-blue);
+    color: var(--text-light);
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 1rem 2.5rem;
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 16px rgba(25, 118, 210, 0.10);
+    text-transform: uppercase;
+    margin-top: var(--spacing-xs);
+    display: inline-block;
+}
+.button.secondary {
+    background: var(--primary-green);
+}
+.button:hover, .cta-button:hover, .about-learn-btn:hover {
+    background: var(--secondary-blue);
+}
+.button.secondary:hover {
+    background: var(--secondary-green);
+}
+
+/* Spacing utility classes */
+.mt-md { margin-top: var(--spacing-md); }
+.mb-md { margin-bottom: var(--spacing-md); }
+.pt-md { padding-top: var(--spacing-md); }
+.pb-md { padding-bottom: var(--spacing-md); }
+
+/* Example icon style for consistency */
+.icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin-bottom: var(--spacing-xs);
+}
