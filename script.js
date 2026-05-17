@@ -1,3 +1,10 @@
+// Utility: sanitize user input to prevent XSS
+function sanitizeHTML(str) {
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+}
+
 // Tab switching functionality
 function showTab(tabName) {
     // Hide all tab contents
@@ -35,9 +42,11 @@ function showTab(tabName) {
     }
 }
 
+// Admin credentials should ideally be validated server-side.
+// This is a basic client-side check for demo purposes only.
 const ADMIN_CREDENTIALS = {
     username: 'admin',
-    password: 'grassroots2026'
+    password: 'Gr@55r00t$2026!'
 };
 
 const ADMIN_SESSION_KEY = 'grassrootAdminLoggedIn';
@@ -411,11 +420,11 @@ document.addEventListener('DOMContentLoaded', function() {
             const item = document.createElement('div');
             item.className = 'admin-application-item';
             item.innerHTML = `
-                <h4>${application.name}</h4>
-                <p><strong>Position:</strong> ${application.position}</p>
-                <p><strong>Email:</strong> ${application.email}</p>
-                <p><strong>Resume:</strong> ${application.resumeName}</p>
-                <p><strong>Applied:</strong> ${application.appliedAt}</p>
+                <h4>${sanitizeHTML(application.name)}</h4>
+                <p><strong>Position:</strong> ${sanitizeHTML(application.position)}</p>
+                <p><strong>Email:</strong> ${sanitizeHTML(application.email)}</p>
+                <p><strong>Resume:</strong> ${sanitizeHTML(application.resumeName)}</p>
+                <p><strong>Applied:</strong> ${sanitizeHTML(application.appliedAt)}</p>
             `;
             adminApplicationsList.appendChild(item);
         });
@@ -453,10 +462,10 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
 
             // Get form values
-            const fullName = this.querySelector('input[placeholder="Full Name"]').value;
-            const email = this.querySelector('input[placeholder="Email Address"]').value;
-            const position = this.querySelector('input[placeholder="Position"]').value;
-            const bio = this.querySelector('textarea[placeholder="Brief Biography"]').value;
+            const fullName = sanitizeHTML(this.querySelector('input[placeholder="Full Name"]').value);
+            const email = sanitizeHTML(this.querySelector('input[placeholder="Email Address"]').value);
+            const position = sanitizeHTML(this.querySelector('input[placeholder="Position"]').value);
+            const bio = sanitizeHTML(this.querySelector('textarea[placeholder="Brief Biography"]').value);
 
             // Create new team card
             const newTeamCard = document.createElement('div');
@@ -486,10 +495,10 @@ document.addEventListener('DOMContentLoaded', function() {
         reviewForm.addEventListener('submit', function(e) {
             e.preventDefault();
 
-            const reviewerName = this.querySelector('input[placeholder="Your Name"]').value;
-            const reviewerRole = this.querySelector('input[placeholder="Your Role or Company"]').value;
+            const reviewerName = sanitizeHTML(this.querySelector('input[placeholder="Your Name"]').value);
+            const reviewerRole = sanitizeHTML(this.querySelector('input[placeholder="Your Role or Company"]').value);
             const reviewerRating = this.querySelector('select').value;
-            const reviewerText = this.querySelector('textarea').value;
+            const reviewerText = sanitizeHTML(this.querySelector('textarea').value);
 
             const reviewCard = document.createElement('div');
             reviewCard.className = 'review-card';
@@ -615,12 +624,3 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Handle CTA button click
-document.addEventListener('DOMContentLoaded', function() {
-    const ctaButton = document.querySelector('.cta-button');
-    if (ctaButton) {
-        ctaButton.addEventListener('click', function(e) {
-            // Button click will automatically trigger showTab via onclick
-        });
-    }
-});
